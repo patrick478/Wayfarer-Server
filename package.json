@@ -1,0 +1,14 @@
+{
+  "name": "node-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.1.x",
+	  "mongoose": "3.5.7",
+    "jsonschema": "0.3.2"
+  },
+  "engines": {
+    "express": "3.3.4",
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
