@@ -134,8 +134,21 @@ app.post('/users', function(request, response){
 	});
 });
 
+// GET '/users'
+// Returns all users.  TEMPORARY DEV THING.
+app.get('/users', function(request, response){
+
+	// Find all users in database
+	var query = userModel.find( function(err, users) {
+		if (err) { internalError(err, response); return; }
+
+		// Send users.
+		response.send(JSON.stringify(users, undefined, 2)); 		
+	});
+});
+
 // GET '/users/{id}'
-// Returns the profile of the user with the given id.
+// Returns the user with the given id.
 app.get('/users/:id', function(request, response){
 
 	// Get the user id from the request
@@ -160,8 +173,6 @@ app.get('/users/:id', function(request, response){
 		response.send(JSON.stringify(profile, undefined, 2)); 		
 	});
 });
-
-
 
 
 // Get test
