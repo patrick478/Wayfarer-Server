@@ -174,6 +174,35 @@ app.get('/users/:id', function(request, response){
 	});
 });
 
+// GET '/steps'
+// Returns a list of all steps.  
+app.get('/steps', function(request, response){
+	var jsonTest = [
+		{
+			id:1,
+			title:'Don\'t let them die',
+			description:'or they will be suicide'
+		},
+		{
+			id:2,
+			title:'Guns are bad',
+			description:'so take them away lol'
+		},
+		{
+			id:3,
+			title:'How do I bring it up?',
+			description:'Simply ask "Are you thinking of committing suicide?"'
+		}
+	];
+	var jsonString = JSON.stringify(jsonTest, undefined, 2);
+	response.send(200, jsonString);
+});
+
+// GET '/steps/{id}'
+// Returns the informations pertaining to the step with the given id
+app.get('/steps/:id', function(request, response){
+	response.send(500, "Not yet implemented");
+});
 
 // Get test
 app.get('/getTest', function(request, response){
