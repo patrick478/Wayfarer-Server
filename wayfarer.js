@@ -180,18 +180,33 @@ app.get('/steps', function(request, response){
 	var jsonTest = [
 		{
 			id:1,
-			title:'Don\'t let them die',
-			description:'or they will be suicide'
+			title:'Check for possible weapons',
+			description:'If you believe your friend may have weapons, ask them directly about it. Convince them to give up the weapon. Act like an authority figure.'
 		},
 		{
 			id:2,
-			title:'Guns are bad',
-			description:'so take them away lol'
+			title:'Don’t leave them alone',
+			description:'It can be dangerous to leave a suicidal individual alone, even for a few minutes. If you have to go, make sure there is someone else to take care of them.'
 		},
 		{
 			id:3,
-			title:'How do I bring it up?',
-			description:'Simply ask "Are you thinking of committing suicide?"'
+			title:'Listen to them',
+			description:'Listen carefully to whatever they say. If they are your friend they will likely be honest with you about how close they are to suicide.'
+		}
+		{
+			id:4,
+			title:'Offer them support',
+			description:'Remind the person that you will support them no matter how bad things get. They are unlikely to commit suicide while you are around.'
+		},
+		{
+			id:5,
+			title:'Ask questions',
+			description:'Asking them in more detail about why they are depressed is a good idea to share the burden. Don’t worry about depressing them further by talking about it.'
+		},
+		{
+			id:6,
+			title:'Get them help',
+			description:'The individual is not likely to seek help on their own. Asking them if they would accept expert help is likely the only way they will get it.'
 		}
 	];
 	var jsonString = JSON.stringify(jsonTest, undefined, 2);
