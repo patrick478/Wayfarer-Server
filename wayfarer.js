@@ -192,7 +192,7 @@ app.get('/steps', function(request, response){
 			id:3,
 			title:'Listen to them',
 			description:'Listen carefully to whatever they say. If they are your friend they will likely be honest with you about how close they are to suicide.'
-		}
+		},
 		{
 			id:4,
 			title:'Offer them support',
