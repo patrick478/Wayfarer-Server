@@ -1,0 +1,53 @@
+{
+  "dangers": [
+    {
+      "name": "example_name",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "example_question",
+        "answers": [
+          "answer_a",
+          "answer_b"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    }
+  ],
+  "informCards": [
+    {
+      "id": 0,
+      "shortDescription": "example_short_description",
+      "longDescription": "example_long_description",
+      "weight": 0.0
+    }
+  ],
+  "preventativeGoals": [
+    {
+      "name": "preventative_goal_name",
+      "description": "preventative_goal_description",
+      "complete": false,
+      "relatedQuestion": "preventative_goal_completion_question"
+    }
+  ],
+  "recoveryGoals": [
+    {
+      "name": "recovery_goal_name",
+      "description": "recovery_goal_description",
+      "complete": false,
+      "relatedQuestion": "recovery_goal_completion_question"
+    }
+  ],
+  "regularGoals": [
+    {
+      "name": "regular_goal_name",
+      "description": "regular_goal_description",
+      "complete": false,
+      "relatedQuestion": "regular_goal_completion_question"
+    }
+  ]
+}
