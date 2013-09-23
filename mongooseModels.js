@@ -27,6 +27,12 @@ function defineModels(mongoose, callback) {
     password: { hashed: String, salt: String }
   });
 
+  // Subject schema
+  var subjectSchema = mongoose.Schema({
+    name: String,
+    state: String
+  });
+
   // Method: Makes a salt 
   userSchema.method('makeSalt', function() {
     return Math.round((new Date().valueOf() * Math.random())) + '';
@@ -58,13 +64,22 @@ function defineModels(mongoose, callback) {
     var value = {
       id: this.id,
       email: this.email,
-      name: { first: this.name.first, last: this.name.last },
+      name: { first: this.name.first, last: this.name.last }
+    };
+    return value;
+  });
+  subjectSchema.virtual('returnType').get(function(){
+    var value = {
+      id: this.id,
+      name: this.name,
+      state: this.state
     };
     return value;
   });
 
   // Compile the models
   mongoose.model('User', userSchema);
+  mongoose.model('Subject', subjectSchema);
 
   // We're done; callback 
   callback();
