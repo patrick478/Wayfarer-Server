@@ -16,19 +16,20 @@ User methods
         "name": { "first": "Lady", "last": "Sass" }
     }
     
-Creates a new user. All fields above must be supplied.
+Creates a new user. *All fields above must be supplied.*
 Returns 201 CREATED on success, as well as the newly created user's information.  
 This includes the user's id.
 
 **POST /users/{id}**
 
     {
-        "email": "bigdaddy69@gmail.com",
-        "name": { "first": "Lord" }
+        "name": { "first": "Shinequa" },
+        "subjectId": "523ffafa634d160200000001"
     }
     
 Updates a user with the given id. The user's id must *not* be supplied in the json (ie. the id cannot be changed).
-All fields are optional; ie, only the ones you want to change should be supplied.
+All fields are optional; ie, only the ones you want to change should be supplied.  
+If the subjectId is supplied, the subject with that ID must exist.  This is the primary means of changing a user's subject.
 Returns 200 OK on success.
 
 **GET /users/{id}**
@@ -63,11 +64,12 @@ This includes the subject's id and a copy of the datapool in its 'datapool' prop
 **POST /subjects/{id}**
 
     {
-        "state": "monstrous"
+        "state": { "what":"ever","goes":"here" }
     }
     
 Updates a subject with the given id. The subject's id must *not* be supplied in the json (ie. the id cannot be changed).
 All fields are optional; ie, only the ones you want to change should be supplied.
+This is the primary means of updating a subject's state.
 Returns 200 OK on success.
 
 **GET /subjects/{id}**
