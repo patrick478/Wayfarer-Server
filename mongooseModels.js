@@ -30,7 +30,7 @@ function defineModels(mongoose, callback) {
   // Subject schema
   var subjectSchema = mongoose.Schema({
     name: String,
-    state: String
+    state: Object
   });
 
   // Method: Makes a salt 
