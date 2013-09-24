@@ -183,6 +183,17 @@ app.post('/users/:id', function(request, response){
 		return;
 	}
 
+	// If subjectId, make sure that subject exists
+	if (request.body.subjectId) {
+		subjectModel.findOne({ _id: request.body.subjectId }, function(err, subject) {
+			if (err) { internalError(err, response); return; }
+			if (!subject){
+				response.send(404, 'That subject could not be found.');
+				return;
+			}	
+		});
+	}
+
 	// Find and update the user in database
 	userModel.update({ _id: request.params.id }, request.body, function(err, numberAffected, raw) {
 		if (err) { internalError(err, response); return; }

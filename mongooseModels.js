@@ -24,7 +24,8 @@ function defineModels(mongoose, callback) {
   var userSchema = mongoose.Schema({
     name: { first: String, last:String },
     email: { type: String, index: { unique: true } },
-    password: { hashed: String, salt: String }
+    password: { hashed: String, salt: String },
+    subjectId: String
   });
 
   // Subject schema
@@ -64,7 +65,8 @@ function defineModels(mongoose, callback) {
     var value = {
       id: this.id,
       email: this.email,
-      name: { first: this.name.first, last: this.name.last }
+      name: { first: this.name.first, last: this.name.last },
+      subjectId: this.subjectId
     };
     return value;
   });
