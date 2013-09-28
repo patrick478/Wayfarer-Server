@@ -1,0 +1,66 @@
+GITHUB: 	git@github.com:patrick478/Wayfarer-Server
+HEROKU:		git@heroku.com:wayfarer-server.git
+
+============
+Creation log
+============
+
+Hello World:
+
+- Install heroku toolbelt https://toolbelt.heroku.com/
+
+- Open a shell, navigate to project dir and log into heroku
+	heroku login
+
+- Create a heroku app
+	heroku create
+
+- Go to heroku dashboard and rename the app
+
+- Set up github repository
+
+- Create project files.  Also create 
+	- 'package.json' for required node packages
+	- 'Procfile' so heroku knows what to do:
+		web: node wayfarer.js
+
+- cd to project folder
+
+- Configure git
+	git init
+	git add .
+	git commit -m "Initial commit"
+	git remote add origin <github url>
+	git remote add heroku <heroku url>     (might need to 'git remote rm heroku' if exists)
+	git pull origin master
+	git push -u origin master
+	git push heroku master
+That last line will configure the app on heroku.  After typign it, the app should be live.
+
+
+Enabling Database:
+
+- add MongoHQ to heroku app from dashboard.
+
+
+=============
+Local hosting
+=============
+
+- Install heroku toolbelt https://toolbelt.heroku.com/
+
+- Use info at 
+  https://devcenter.heroku.com/articles/quickstart
+  to get the git repo onto your machine and link it to both repositories (heroku and github)
+
+- install mongodb and run it (bin/mongod), might need to make a db folder and point to it with --dbpath
+  'mongod.exe --dbpath ../wayfarerdb'
+
+- install required node packages
+  'npm install'
+
+- Start the server 
+  'node wayfarer.js'
+
+- Server can be accessed at localhost:5000/
+  I recommend using the Postman chrome plugin.
