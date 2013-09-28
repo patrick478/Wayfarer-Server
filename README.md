@@ -48,6 +48,12 @@ Returns 200 OK on success
 Deletes the user with the given id.
 Returns 200 OK on success.
 
+**GET /authenticate**
+
+*Requires Basic Authentication header.* Retrieves the user specified by the email and password in the basic auth header, IF they exist and the passwords match.
+Returns 200 success, as well as the user's information.  
+
+
 Subject methods
 ----------
 
