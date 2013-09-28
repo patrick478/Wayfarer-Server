@@ -77,6 +77,27 @@ fs.readFile('datapool.dat', function(err, data) {
 	datapool = JSON.parse(data);
 });
 
+// Setup the Basic Authentication function.
+var authenticate = express.basicAuth(function(email, password, callback) {
+	// Find the user by email (which is unique)
+	userModel.findOne({'email':email}, function(err, user){
+		// Pass errors on to the callback function instead of failing immediately.
+		if (!err){
+			// User not found?
+			if (!user){
+				console.log('authenticate: No user exists with that email address');
+				err = new Error('No user exists with that email address.');
+			// User found: authenticate them by comparing their password.
+			// Creates a new error if they don't match, which will automatically throw a 401.
+			} else if (!user.authenticate(password)){
+				err = new Error('Email and password do not match.');
+			}
+		}
+		// Callback with any errors that have arisen, and the user's profile.
+		callback(err, user);		
+	}); 
+});
+
 // ------------------------------------------------------------------------------------------------
 // API end point setup
 // ------------------------------------------------------------------------------------------------
@@ -84,6 +105,14 @@ fs.readFile('datapool.dat', function(err, data) {
 // Root
 app.get('/', function(request, response){
 	response.send('See README.md in Wayfarer-Server git for API details.');
+});
+
+// GET '/authenticate'
+// Tests basic authentication and returns the user's info if successful.
+// If authentication fails, 401 is automatically returned via the auth error thrown.
+app.get('/authenticate', authenticate, function(request, response){
+	var user = request.user.returnType;
+	response.send(200, JSON.stringify(user, undefined, 2));
 });
 
 // PUT '/users'
