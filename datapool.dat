@@ -1,13 +1,178 @@
 {
   "dangers": [
     {
-      "name": "example_name",
+      "name": "Mention of suicide",
+      "description": "Almost everyone who commits or attempts suicide has given some clue or warning. Do not ignore suicide threats. Statements like \"you\u0027ll be sorry when I\u0027m dead,\" \"I can\u0027t see any way out,\" — no matter how casually or jokingly said may indicate serious suicidal feelings.",
       "level": 0.0,
       "relevantQuestion": {
-        "question": "example_question",
+        "question": "How often have they mentioned suicide?",
         "answers": [
-          "answer_a",
-          "answer_b"
+          "Never",
+          "Not Recently",
+          "Recently",
+          "Recently, several times"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Seeking access to guns, pills, knives, or other objects that could be used in a suicide attempt.",
+      "description": "Have they been seeking out lethal means?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "I have seen them",
+        "answers": [
+          "I suspect they have",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Unusual focus on death, dying, or violence. Writing poems or stories about death.",
+      "description": "Do they seem preocupied with death?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "Yes",
+        "answers": [
+          "No",
+          "Not sure"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Feelings of helplessness, hopelessness, and being trapped (\"There\u0027s no way out\"). Belief that things will never get better or change.",
+      "description": "Are they activly thinking about the future?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "Yes",
+        "answers": [
+          "No",
+          "Not sure"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Feelings of worthlessness, guilt, shame, and self-hatred. Feeling like a burden (\"Everyone would be better off without me\").",
+      "description": "Have they made self lothing statements recently?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "Yes",
+        "answers": [
+          "No",
+          "Not sure"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Making out a will. Giving away prized possessions. Making arrangements for family members.",
+      "description": "Does their behaviour suggest they are getting their affairs in order?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "Yes",
+        "answers": [
+          "No",
+          "Not sure"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Unusual or unexpected visits or calls to family and friends. Saying goodbye to people as if they won\u0027t be seen again.",
+      "description": "Are they behaving like they may not see you again?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "Yes",
+        "answers": [
+          "No",
+          "Not sure"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Withdrawing from friends and family. Increasing social isolation. Desire to be left alone.",
+      "description": "Have they initiated conversation with you or another person recently?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "Yes",
+        "answers": [
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Increased alcohol or drug use, reckless driving, unsafe sex. Taking unnecessary risks as if they have a \"death wish.\"",
+      "description": "Have you noticed self-destructive behaviour in them recently?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "None",
+        "answers": [
+          "Minor",
+          "Causing concern"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "A sudden sense of calm and happiness after being extremely depressed can mean that the person has made a decision to commit suicide.",
+      "description": "Have they ignored any bad things happening recently?",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "None",
+        "answers": [
+          "Yes (small case)",
+          "Yes (large case)"
         ],
         "selectedAnswer": -1,
         "weights": {},
@@ -20,9 +185,13 @@
   ],
   "informCards": [
     {
-      "id": 0,
-      "shortDescription": "example_short_description",
-      "longDescription": "example_long_description",
+      "shortDescription": "Talking about it",
+      "longDescription": "You don\u0027t give a suicidal person morbid ideas by talking about suicide. The opposite is true — bringing up the subject of suicide and discussing it openly is one of the most helpful things you can do.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Seeking help",
+      "longDescription": "Studies of suicide victims have shown that more than half had sought medical help in the six months prior to their deaths.",
       "weight": 0.0
     }
   ],
