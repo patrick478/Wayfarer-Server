@@ -215,26 +215,68 @@
   ],
   "preventativeGoals": [
     {
-      "name": "preventative_goal_name",
-      "description": "preventative_goal_description",
+      "name": "Ask person to seek professional help. ",
+      "description": "Do everything in your power to get a suicidal person the help he or she needs. Call a crisis line for advice and referrals. Encourage the person to see a mental health professional, help locate a treatment facility, or take them to a doctor\u0027s appointment.",
       "complete": false,
-      "relatedQuestion": "preventative_goal_completion_question"
+      "relatedQuestion": "Have they agreed to professional help?"
+    },
+    {
+      "name": "Be proactive.",
+      "description": "Those contemplating suicide often don\u0027t believe they can be helped, so you may have to be more proactive at offering assistance. Saying, “Call me if you need anything” is too vague. Don’t wait for the person to call you or even to return your calls. Drop by, call again, invite the person out.",
+      "complete": false,
+      "relatedQuestion": "Have you maintained regular contact with them?"
+    },
+    {
+      "name": "Make a safety plan. ",
+      "description": "Help the person develop a set of steps he or she promises to follow during a suicidal crisis. It should identify any triggers that may lead to a suicidal crisis, such as an anniversary of a loss, alcohol, or stress from relationships. Also include contact numbers for the person\u0027s doctor or therapist, as well as friends and family members who will help in an emergency.",
+      "complete": false,
+      "relatedQuestion": "Do you have a suitable safety plan?"
+    },
+    {
+      "name": "Remove potential means of suicide.",
+      "description": "These include pills, knives, razors, or firearms. If the person is likely to take an overdose, keep medications locked away or give out only as the person needs them.",
+      "complete": false,
+      "relatedQuestion": "Have they surrendered all possible weapons?"
     }
   ],
   "recoveryGoals": [
     {
-      "name": "recovery_goal_name",
-      "description": "recovery_goal_description",
+      "name": "Help the person to get into a regular routine of exercise",
+      "description": "Exercise is also extremely important as it releases endorphins, relieves stress, and promotes emotional well-being.",
       "complete": false,
-      "relatedQuestion": "recovery_goal_completion_question"
+      "relatedQuestion": "Have they started a regular exersizze routine?"
+    },
+    {
+      "name": "Encourage the person to be with friends or family more often",
+      "description": "It’s important for the person to have healthy social relationships with those around them. This will help increase their overall happiness and provide a lot more support over the long term.",
+      "complete": false,
+      "relatedQuestion": "Are they making regular meetings with friends/family? "
+    },
+    {
+      "name": "Make choices towards healthier foods",
+      "description": "Healthy foods promote longer lasting energy and an overall increase in satisfaction emotionally. If the person has a choice between foods  encourage them to make healthier choices.",
+      "complete": false,
+      "relatedQuestion": "Are they maintaining a healthy diet."
     }
   ],
   "regularGoals": [
     {
-      "name": "regular_goal_name",
-      "description": "regular_goal_description",
+      "name": "Follow-up on treatment. ",
+      "description": "If the doctor prescribes medication, make sure your friend or loved one takes it as directed. Be aware of possible side effects and be sure to notify the physician if the person seems to be getting worse. It often takes time and persistence to find the medication or therapy that’s right for a particular person.",
       "complete": false,
-      "relatedQuestion": "regular_goal_completion_question"
+      "relatedQuestion": "Have you made sure they are still taking their medication?"
+    },
+    {
+      "name": "Ask about how they are feeling",
+      "description": "Although it may be a touchy subject, the people often feel like it’s hard to approach anyone about their thoughts and feelings, so it may be easier for you to  make the first step for them. Be a good listener and try to understand their situation and feelings.",
+      "complete": false,
+      "relatedQuestion": "Have you asked them about their feelings recently?"
+    },
+    {
+      "name": "Organize a group of friends",
+      "description": "having regular special occasions where groups of there friends are together can be a real boost. Events like movie nights, or just hanging out at home can help boost social integrity of the social dynamic.",
+      "complete": false,
+      "relatedQuestion": "Have you been on a group outing with them recently?"
     }
   ]
 }
