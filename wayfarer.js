@@ -77,7 +77,8 @@ fs.readFile('datapool.dat', function(err, data) {
 	datapool = JSON.parse(data);
 });
 
-// Setup the Basic Authentication function.
+// Set up the Basic Authentication function.
+// When authentication fails for any reason, 401 is automatically returned.
 var authenticate = express.basicAuth(function(email, password, callback) {
 	// Find the user by email (which is unique)
 	userModel.findOne({'email':email}, function(err, user){
@@ -107,10 +108,10 @@ app.get('/', function(request, response){
 	response.send('See README.md in Wayfarer-Server git for API details.');
 });
 
-// GET '/authenticate'
-// Tests basic authentication and returns the user's info if successful.
-// If authentication fails, 401 is automatically returned via the auth error thrown.
-app.get('/authenticate', authenticate, function(request, response){
+// GET '/users'
+// Requires authentication.
+// Returns the authenticated user.
+app.get('/users', authenticate, function(request, response){
 	var user = request.user.returnType;
 	response.send(200, JSON.stringify(user, undefined, 2));
 });
@@ -119,7 +120,7 @@ app.get('/authenticate', authenticate, function(request, response){
 // {
 // 	"email": "bigmomma69@gmail.com",
 // 	"password": "password",
-//  "name": { "first": "Lady", "last": "Sass" }
+//  "name": "Lady Sass"
 // }
 // Creates a user.
 app.put('/users', function(request, response){
@@ -127,8 +128,7 @@ app.put('/users', function(request, response){
 	// Validate JSON fields exist
 	if (!request.body 
 		|| !request.body.email
-		|| !request.body.name.first
-		|| !request.body.name.last
+		|| !request.body.name
 		|| !request.body.password){
 		console.log("PUT /users: Body missing required information.");
 		response.send(400, "Body missing required information.");
@@ -137,8 +137,7 @@ app.put('/users', function(request, response){
 
 	// Tidy up input
 	request.body.email = request.body.email.trim().toLowerCase();
-	request.body.name.first = request.body.name.first.trim().capitalize();
-	request.body.name.last = request.body.name.last.trim().capitalize();
+	request.body.name = request.body.name.trim().capitalize();
 
 	// Find any users with the same email 
 	userModel.find({'email':request.body.email}, function (err, existingUsers) {
@@ -168,9 +167,11 @@ app.put('/users', function(request, response){
 	});
 });
 
-// GET '/users'
+
+
+// GET '/allUsers'
 // Returns all users.  TEMPORARY DEV THING.
-app.get('/users', function(request, response){
+app.get('/allUsers', function(request, response){
 
 	// Find all users in database
 	var query = userModel.find( function(err, users) {
@@ -200,7 +201,7 @@ app.get('/users/:id', function(request, response){
 
 // POST '/users/{id}'
 // {
-//  "name": { "first": "Prince" } 
+//  "name": "Prince"
 // }
 // Updates a given user
 app.post('/users/:id', function(request, response){
@@ -232,6 +233,21 @@ app.post('/users/:id', function(request, response){
 		}
 		console.log('POST /users/{id}: Updated user with id "'+request.params.id+'"');
 		response.send(200, "User updated"); 		
+	});
+});
+
+// DELETE '/users'
+// Deletes the authenticated user
+app.delete('/users', authenticate, function(request, response){
+
+	// Find the user in database
+	var query = userModel.remove({ _id: request.user.returnType.id }, function(err, user) {
+		if (err) { internalError(err, response); return; }
+		if (!user){
+			response.send(404, 'That user could not be found.');
+			return;
+		}
+		response.send(200, "User deleted"); 		
 	});
 });
 
