@@ -1,16 +1,16 @@
 {
   "dangers": [
     {
-      "name": "Mention of suicide",
-      "description": "Almost everyone who commits or attempts suicide has given some clue or warning. Do not ignore suicide threats. Statements like \"you\u0027ll be sorry when I\u0027m dead,\" \"I can\u0027t see any way out,\" — no matter how casually or jokingly said may indicate serious suicidal feelings.",
+      "name": "Isolation",
+      "description": "Suicidal individuals will often try to isolate themselves from their friends and family. It is important to make sure they are getting regular attention from people who care about them.",
       "level": 0.0,
       "relevantQuestion": {
-        "question": "How often have they mentioned suicide?",
+        "question": "What best describes their social interactions over the past week?",
         "answers": [
-          "Never",
-          "Not Recently",
-          "Recently",
-          "Recently, several times"
+          "Turning down social invitations",
+          "Socialising only when asked to",
+          "Talking to people freely",
+          "Making arrangements to spend time with people"
         ],
         "selectedAnswer": -1,
         "weights": {},
@@ -23,14 +23,36 @@
       }
     },
     {
-      "name": "Seeking out lethal means",
-      "description": "Seeking access to guns, pills, knives, or other objects that could be used in a suicide attempt.",
+      "name": "Hopelessness",
+      "description": "Suicidal people often feel powerless to make a difference to anything. Try to remind them of the good they can do/have done.",
       "level": 0.0,
       "relevantQuestion": {
-        "question": "Have they been seeking out lethal means?",
+        "question": "How well are they doing in keeping up with responsibilities?",
         "answers": [
-          "I have seen them",
-          "I suspect they have",
+          "Home/Person in poor condition",
+          "Personal stuff ok, but not dealing with commitments involving others",
+          "Dealing with responsibilities ok",
+          "Doing ok, and willing to accept new responsibilities"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Pessimism",
+      "description": "Cynicism in dangerous for a suicidal person, and can build up over time if no one supports them. Keep careful note of any pessimistic activity.",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "Would you say their pessimism is concerning you?",
+        "answers": [
+          "Yes",
+          "Somewhat",
           "No"
         ],
         "selectedAnswer": -1,
@@ -43,19 +65,21 @@
       }
     },
     {
-      "name": "Preoccupation with death",
-      "description": "Unusual focus on death, dying, or violence. Writing poems or stories about death.",
+      "name": "Health",
+      "description": "Health defects can both cause and be cause by depression. Look out for things like loss of appetite, sleep problems and drug use.",
       "level": 0.0,
       "relevantQuestion": {
-        "question": "Do they seem preocupied with death?",
+        "question": "How is their current state of health.",
         "answers": [
-          "Yes",
-          "No",
-          "Not sure"
+          "Exhausted/Severe weight change (gain or loss)/Drug problem",
+          "Regularly tired/not exersising",
+          "Doing ok",
+          "Doing well"
         ],
         "selectedAnswer": -1,
         "weights": {},
         "outcomes": [
+          {},
           {},
           {},
           {}
@@ -63,137 +87,63 @@
       }
     },
     {
-      "name": "No hope for the future",
-      "description": "Feelings of helplessness, hopelessness, and being trapped (\"There\u0027s no way out\"). Belief that things will never get better or change.",
+      "name": "Agressivness",
+      "description": "Agressive outbursts from suicidal people can be triggered by small things. This may be a sign they are uncomfortable with how you are treating them.",
       "level": 0.0,
       "relevantQuestion": {
-        "question": "Are they activly thinking about the future?",
+        "question": "Have they had any agressive outbursts recently?",
         "answers": [
-          "Yes",
-          "No",
-          "Not sure"
-        ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
-          {},
-          {},
-          {}
-        ]
-      }
-    },
-    {
-      "name": "Self-loathing, self-hatred",
-      "description": "Feelings of worthlessness, guilt, shame, and self-hatred. Feeling like a burden (\"Everyone would be better off without me\").",
-      "level": 0.0,
-      "relevantQuestion": {
-        "question": "Have they made self lothing statements recently?",
-        "answers": [
-          "Yes",
-          "No",
-          "Not sure"
-        ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
-          {},
-          {},
-          {}
-        ]
-      }
-    },
-    {
-      "name": "Getting affairs in order",
-      "description": "Making out a will. Giving away prized possessions. Making arrangements for family members.",
-      "level": 0.0,
-      "relevantQuestion": {
-        "question": "Does their behaviour suggest they are getting their affairs in order?",
-        "answers": [
-          "Yes",
-          "No",
-          "Not sure"
-        ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
-          {},
-          {},
-          {}
-        ]
-      }
-    },
-    {
-      "name": "Saying goodbye",
-      "description": "Unusual or unexpected visits or calls to family and friends. Saying goodbye to people as if they won\u0027t be seen again.",
-      "level": 0.0,
-      "relevantQuestion": {
-        "question": "Are they behaving like they may not see you again?",
-        "answers": [
-          "Yes",
-          "No",
-          "Not sure"
-        ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
-          {},
-          {},
-          {}
-        ]
-      }
-    },
-    {
-      "name": "Withdrawing from others",
-      "description": "Withdrawing from friends and family. Increasing social isolation. Desire to be left alone.",
-      "level": 0.0,
-      "relevantQuestion": {
-        "question": "Have they initiated conversation with you or another person recently?",
-        "answers": [
-          "Yes",
+          "Major incident",
+          "Minor incident",
           "No"
         ],
         "selectedAnswer": -1,
         "weights": {},
         "outcomes": [
           {},
-          {}
-        ]
-      }
-    },
-    {
-      "name": "Self-destructive behavior",
-      "description": "Increased alcohol or drug use, reckless driving, unsafe sex. Taking unnecessary risks as if they have a \"death wish.\"",
-      "level": 0.0,
-      "relevantQuestion": {
-        "question": "Have you noticed self-destructive behaviour in them recently?",
-        "answers": [
-          "None",
-          "Minor",
-          "Causing concern"
-        ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
-          {},
           {},
           {}
         ]
       }
     },
     {
-      "name": "Sudden sense of calm",
-      "description": "A sudden sense of calm and happiness after being extremely depressed can mean that the person has made a decision to commit suicide.",
+      "name": "Self-loathing",
+      "description": "Suicidal individuals may begin to see themselves as a burden on others. Doing everything for them may seem kind, but they need to do some things for themselves to stop this from happening.",
       "level": 0.0,
       "relevantQuestion": {
-        "question": "Have they ignored any bad things happening recently?",
+        "question": "What level of self esteem best describes their recent activity?",
         "answers": [
-          "None",
-          "Yes (small case)",
-          "Yes (large case)"
+          "Convinced they are worthless",
+          "Unsure of themselves",
+          "Ok",
+          "Good"
         ],
         "selectedAnswer": -1,
         "weights": {},
         "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    },
+    {
+      "name": "Recklessness",
+      "description": "People who do not value their own lives will behave recklessly. Make sure to steer them away from drugs and life altering decisions. ",
+      "level": 0.0,
+      "relevantQuestion": {
+        "question": "Have they put themselves in a risky situation recently?",
+        "answers": [
+          "Serious danger",
+          "Potential physical harm",
+          "Potential social/financial harm",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
           {},
           {},
           {}
@@ -211,20 +161,76 @@
       "shortDescription": "Seeking help",
       "longDescription": "Studies of suicide victims have shown that more than half had sought medical help in the six months prior to their deaths.",
       "weight": 0.0
+    },
+    {
+      "shortDescription": "Mention of suicide",
+      "longDescription": "Almost everyone who commits or attempts suicide has given some clue or warning. Do not ignore suicide threats. Statements like \"you\u0027ll be sorry when I\u0027m dead,\" \"I can\u0027t see any way out,\" — no matter how casually or jokingly said may indicate serious suicidal feelings.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Seeking out lethal means",
+      "longDescription": "Suicidal people will often seek out weapons to take some control of their situation. If they are willing to listen to you, you should be able to convince them to give up any weapons they have. If they refuse, consider trying to use your authority on them. Tell them they don\u0027t need it.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Preoccupation with death",
+      "longDescription": "Suicidal individuals will often become preoccupied with death. This obsession can lead to a downward spiral. Don’t tell them not to think about it, but try getting them interested in other topics. Ask them about what they find interesting and try move the subject to this topic.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "No hope for the future",
+      "longDescription": "Feelings of helplessness, hopelessness, and being trapped are all signs of depression. Remind them that there are people who care about them, and talk about what you like about them.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Self-loathing, self-hatred",
+      "longDescription": "Feelings of worthlessness, guilt, shame, and self-hatred are dangerous both to the at risk individual, and the people around them. They may lash out at people around them if they feel they are unworthy of being helped. Your first reaction should be to console them, but if they are being difficult, it may be better to give them space to calm down. Make sure they don’t have any weapons in them before you leave. ",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Getting affairs in order",
+      "longDescription": "Making out a will. Giving away prized possessions. Making arrangements for family members. These can all be signs that a person is considering suicide. If you notice these signs, read ‘Starting a conversation’.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Saying goodbye",
+      "longDescription": "Unusual or unexpected visits or calls to family and friends. Saying goodbye to people as if they won\u0027t be seen again. These can all be signs that a person is considering suicide. If you notice these signs, read ‘Starting a conversation’.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Withdrawing from others",
+      "longDescription": "Withdrawing from friends and family. Increasing social isolation. Desire to be left alone. Suicidal individuals may attempt to isolate themselves, but this should be considered as a cry for help. It is always a good idea to make regular check-ins on them, but don’t smother them if they need time alone as well.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Self-destructive behaviour",
+      "longDescription": "Increased alcohol or drug use, reckless driving, unsafe sex. Taking unnecessary risks as if they have a \"death wish.\" These can all be signs that a person is considering suicide. If you notice these signs, read ‘Starting a conversation’.",
+      "weight": 0.0
+    },
+    {
+      "shortDescription": "Sudden sense of calm",
+      "longDescription": "A sudden sense of calm and happiness after being extremely depressed can mean that the person has made a decision to commit suicide. If this is true confront them immediately. A call button for the suicide hotline is available on the front page of this app. ",
+      "weight": 0.0
     }
   ],
   "preventativeGoals": [
+    {
+      "name": "Make the initial conversation",
+      "description": "It is important to be honest and clear when you talk to the person. Ask them if they are thinking about suicide and why. It is ok to talk about it. Don’t worry about giving them ideas.",
+      "complete": false,
+      "relatedQuestion": "Have you made the initial conversation?"
+    },
+    {
+      "name": "Remove potential means of suicide.",
+      "description": "These include pills, knives, razors, or firearms. If the person is likely to take an overdose, keep medications locked away or give out only as the person needs them. They are likely to listen to you if you act as an authority figure.",
+      "complete": false,
+      "relatedQuestion": "Have they surrendered all possible weapons?"
+    },
     {
       "name": "Ask person to seek professional help. ",
       "description": "Do everything in your power to get a suicidal person the help he or she needs. Call a crisis line for advice and referrals. Encourage the person to see a mental health professional, help locate a treatment facility, or take them to a doctor\u0027s appointment.",
       "complete": false,
       "relatedQuestion": "Have they agreed to professional help?"
-    },
-    {
-      "name": "Be proactive.",
-      "description": "Those contemplating suicide often don\u0027t believe they can be helped, so you may have to be more proactive at offering assistance. Saying, “Call me if you need anything” is too vague. Don’t wait for the person to call you or even to return your calls. Drop by, call again, invite the person out.",
-      "complete": false,
-      "relatedQuestion": "Have you maintained regular contact with them?"
     },
     {
       "name": "Make a safety plan. ",
@@ -233,30 +239,66 @@
       "relatedQuestion": "Do you have a suitable safety plan?"
     },
     {
-      "name": "Remove potential means of suicide.",
-      "description": "These include pills, knives, razors, or firearms. If the person is likely to take an overdose, keep medications locked away or give out only as the person needs them.",
+      "name": "Schedule times to check up on them",
+      "description": "Between you and your friends you should make sure that you can check up on this person at least once a day for the early stages of their recovery.",
       "complete": false,
-      "relatedQuestion": "Have they surrendered all possible weapons?"
+      "relatedQuestion": "Have you made a check-up schedule?"
     }
   ],
   "recoveryGoals": [
     {
+      "name": "Help them get a regular social outlet",
+      "description": "This could be anything from a sports team to a club to a regular hangout session with friends. Regular social contact and the feeling of usefulness is an effective counter to depression.",
+      "complete": false,
+      "relatedQuestion": "Have they committed to a regular social outlet?"
+    },
+    {
+      "name": "Get them clean from drugs",
+      "description": "Getting clean from drugs is dangerous for a person under extreme pressure. It will help out there mood in the long run, but you will have to very careful to take care of them while they recover.",
+      "complete": false,
+      "relatedQuestion": "Have they been clean for at least a week?"
+    },
+    {
       "name": "Help the person to get into a regular routine of exercise",
       "description": "Exercise is also extremely important as it releases endorphins, relieves stress, and promotes emotional well-being.",
       "complete": false,
-      "relatedQuestion": "Have they started a regular exersizze routine?"
+      "relatedQuestion": "Have they started a regular exercise routine?"
     },
     {
-      "name": "Encourage the person to be with friends or family more often",
-      "description": "It’s important for the person to have healthy social relationships with those around them. This will help increase their overall happiness and provide a lot more support over the long term.",
+      "name": "Stabilise weight problems",
+      "description": "If the person if experiencing any significant loss or gain of weight it is important to address why and get them back to a reasonable diet, or their level of stress will increase. If they are losing weight due to stress, you may have to make food for them to encourage them to eat. If they are gaining weight, you may have to convince them to diet. ",
       "complete": false,
-      "relatedQuestion": "Are they making regular meetings with friends/family? "
+      "relatedQuestion": "Is their weight remaining stable or returning to normal?"
     },
     {
-      "name": "Make choices towards healthier foods",
-      "description": "Healthy foods promote longer lasting energy and an overall increase in satisfaction emotionally. If the person has a choice between foods  encourage them to make healthier choices.",
+      "name": "Have them take up a hobby",
+      "description": "Any personal achievements will work well to increase the persons sense of self-worth. If they don’t have a hobby, try and find something they can do. You can invite them to do something with you if they would enjoy it. If they do have a hobby, but have abandoned it, convince them to get back into it.",
       "complete": false,
-      "relatedQuestion": "Are they maintaining a healthy diet."
+      "relatedQuestion": "Have they got a hobby to work on?"
+    },
+    {
+      "name": "Help them make a plan for the future",
+      "description": "If their life feels directionless, a good plan can help them maintain a positive outlook. Help them see a good possible future.",
+      "complete": false,
+      "relatedQuestion": "Do they have a good plan for the future?"
+    },
+    {
+      "name": "Make sure they have something they can do for enjoyment on their own",
+      "description": "Without some way to entertain themselves, they are likely to become cynical with their lives. If you know of anything they enjoy, convince them to spend more time with it.",
+      "complete": false,
+      "relatedQuestion": "Do they have some way to entertain themselves?"
+    },
+    {
+      "name": "Resolve aggressiveness issues",
+      "description": "If something is making them angry, it is important to find out what or they may take out their anger on other people and regret it. Talk to them about what is making them angry and form a plan to deal with it?",
+      "complete": false,
+      "relatedQuestion": "Are they still noticeably angry?"
+    },
+    {
+      "name": "Convince them to stop engaging in self-harm",
+      "description": "Self-harm is fairly common in recovering suicidal people. It may be difficult to convince them to stop. Try addressing the root cause of their self-harm by asking them why they do it instead of just asking them to stop. They may become frustrated with you if you are too forceful, so be careful.",
+      "complete": false,
+      "relatedQuestion": "Have they stopped harming themselves?"
     }
   ],
   "regularGoals": [
@@ -278,5 +320,82 @@
       "complete": false,
       "relatedQuestion": "Have you been on a group outing with them recently?"
     }
-  ]
+  ],
+  "initialSurvey": {
+    "questions": [
+      {
+        "question": "Are they on any medication?",
+        "answers": [
+          "None",
+          "Antidepressant",
+          "antipsychotic"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "question": "Do they have any prior troubles with suicide?",
+        "answers": [
+          "Yes (more than one)",
+          "Yes (only one)",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "question": "Is there a history of mental illness in their family",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      },
+      {
+        "question": "How close are you to this person?",
+        "answers": [
+          "Not close",
+          "Friend",
+          "Close Friend",
+          "Family"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "question": "",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": {},
+        "outcomes": [
+          {},
+          {}
+        ]
+      }
+    ]
+  }
 }
