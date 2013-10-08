@@ -46,7 +46,7 @@ function defineModels(mongoose, callback) {
 
   // Method: Authenticates the user by checking the given password against the stored one.
   userSchema.method('authenticate', function(plainText) {
-    return this.encryptPassword(plainText) === this.password.hashed;
+    return this.encryptPassword(plainText) == this.password.hashed;
   });
 
   // Virtual: Get ID in hex string form
