@@ -3,7 +3,7 @@ Wayfarer-Server
 
 All put/post requests that have JSON attached must include a `Content-Type`:`application/json` header.
 
-Note that there is no authentication or validation at the moment; anyone can perform any action.
+Many methods require an authentication header; this uses the basic authentication format using the email and password of the user.
 
 User methods
 -----
@@ -13,45 +13,34 @@ User methods
     {
         "email": "bigmomma69@gmail.com",
         "password": "password",
-        "name": { "first": "Lady", "last": "Sass" }
+        "name": "Lady sass"
     }
     
 Creates a new user. *All fields above must be supplied.*
 Returns 201 CREATED on success, as well as the newly created user's information.  
 This includes the user's id.
 
-**POST /users/{id}**
+**POST /users**
 
     {
-        "name": { "first": "Shinequa" },
+        "name": "Shinequa",
         "subjectId": "523ffafa634d160200000001"
     }
     
-Updates a user with the given id. The user's id must *not* be supplied in the json (ie. the id cannot be changed).
+*Requires authentication header*. Updates a user. The user's id must *not* be supplied in the json (ie. the id cannot be changed).
 All fields are optional; ie, only the ones you want to change should be supplied.  
-If the subjectId is supplied, the subject with that ID must exist.  This is the primary means of changing a user's subject.
-Returns 200 OK on success.
-
-**GET /users/{id}**
-
-Gets all information on the user with the given id.
+If the email is supplied, it must be unique.  If the subjectId is supplied, the subject with that ID must exist.  This is the primary means of changing a user's subject.
 Returns 200 OK on success.
 
 **GET /users**
 
-(TEMPORARY DEV ONLY)
-Gets all information on all users. 
-Returns 200 OK on success
-
-**DELETE /users/{id}**
-
-Deletes the user with the given id.
+*Requires authentication header* Gets all information on the user.
 Returns 200 OK on success.
 
-**GET /authenticate**
+**DELETE /users**
 
-*Requires Basic Authentication header.* Retrieves the user specified by the email and password in the basic auth header, IF they exist and the passwords match.
-Returns 200 success, as well as the user's information.  
+*Requires authentication header* Deletes the user.
+Returns 200 OK on success.
 
 
 Subject methods
@@ -63,44 +52,40 @@ Subject methods
         "name": "Moe"
     }
     
-Creates a new subject. All fields above must be supplied (currently, just a non-unique name).
+*Requires authentication header* Creates a new subject. All fields above must be supplied (currently, just a non-unique name). 
+The user's subjectId is set to the created subject's id.
 Returns 201 CREATED on success, as well as the newly created subject's information.  
 This includes the subject's id and a copy of the datapool in its 'datapool' property.
 
-**POST /subjects/{id}**
+**POST /subjects**
 
     {
         "state": { "what":"ever","goes":"here" }
     }
     
-Updates a subject with the given id. The subject's id must *not* be supplied in the json (ie. the id cannot be changed).
+*Requires authentication header* Updates the subject watched by the authenticated user. 
+The subject's id must *not* be supplied in the json (ie. the id cannot be changed).
 All fields are optional; ie, only the ones you want to change should be supplied.
 This is the primary means of updating a subject's state.
 Returns 200 OK on success.
 
-**GET /subjects/{id}**
-
-Gets all information on the subject with the given id, including their state.
-Returns 200 OK on success.
-
 **GET /subjects**
 
-(TEMPORARY DEV ONLY)
-Gets all information on all subjects. 
+*Requires authentication header* Gets all information on the subject watched by the authenticated user, including their state.
 Returns 200 OK on success.
 
-**DELETE /subjects/{id}**
-
-Deletes the subject with the given id.
-Returns 200 OK on success.
 
 Other methods
 ----------
 
-**GET /getTest**
+**GET /datapool**
 
-Performs a simple GET test and returns some arbitrary JSON.
+Retrieves the datapool in JSON format as its body.
 
-**POST /postTest**
+**POST /datapool**
 
-Performs a simple POST test.
+    {
+        "whatever": { "what":"ever","goes":"here" }
+    }
+    
+Sets the datapool to the body of the post.
