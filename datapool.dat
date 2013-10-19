@@ -13,8 +13,33 @@
           "Making arrangements to spend time with people"
         ],
         "selectedAnswer": -1,
-        "weights": {},
+        "weights": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {
+            "Isolation": 0.9
+          },
+          {
+            "Isolation": 0.6
+          },
+          {
+            "Isolation": 0.3
+          },
+          {
+            "Isolation": 0.1
+          }
+        ],
         "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "removals": [
           {},
           {},
           {},
@@ -35,8 +60,33 @@
           "Doing ok, and willing to accept new responsibilities"
         ],
         "selectedAnswer": -1,
-        "weights": {},
+        "weights": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {
+            "Hopelessness": 0.9
+          },
+          {
+            "Hopelessness": 0.6
+          },
+          {
+            "Hopelessness": 0.3
+          },
+          {
+            "Hopelessness": 0.1
+          }
+        ],
         "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "removals": [
           {},
           {},
           {},
@@ -56,8 +106,28 @@
           "No"
         ],
         "selectedAnswer": -1,
-        "weights": {},
+        "weights": [
+          {},
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {
+            "Pessimism": 0.9
+          },
+          {
+            "Pessimism": 0.5
+          },
+          {
+            "Pessimism": 0.1
+          }
+        ],
         "outcomes": [
+          {},
+          {},
+          {}
+        ],
+        "removals": [
           {},
           {},
           {}
@@ -77,8 +147,33 @@
           "Doing well"
         ],
         "selectedAnswer": -1,
-        "weights": {},
+        "weights": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {
+            "Health": 0.9
+          },
+          {
+            "Health": 0.6
+          },
+          {
+            "Health": 0.3
+          },
+          {
+            "Health": 0.1
+          }
+        ],
         "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "removals": [
           {},
           {},
           {},
@@ -98,8 +193,28 @@
           "No"
         ],
         "selectedAnswer": -1,
-        "weights": {},
+        "weights": [
+          {},
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {
+            "Agressivness": 0.9
+          },
+          {
+            "Agressivness": 0.5
+          },
+          {
+            "Agressivness": 0.1
+          }
+        ],
         "outcomes": [
+          {},
+          {},
+          {}
+        ],
+        "removals": [
           {},
           {},
           {}
@@ -119,8 +234,33 @@
           "Good"
         ],
         "selectedAnswer": -1,
-        "weights": {},
+        "weights": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {
+            "Self-loathing": 0.9
+          },
+          {
+            "Self-loathing": 0.6
+          },
+          {
+            "Self-loathing": 0.3
+          },
+          {
+            "Self-loathing": 0.1
+          }
+        ],
         "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "removals": [
           {},
           {},
           {},
@@ -130,7 +270,7 @@
     },
     {
       "name": "Recklessness",
-      "description": "People who do not value their own lives will behave recklessly. Make sure to steer them away from drugs and life altering decisions. ",
+      "description": "People who do not value their own lives will behave recklessly. Make sure to steer them away from drugs and life altering decisions.",
       "level": 0.0,
       "relevantQuestion": {
         "question": "Have they put themselves in a risky situation recently?",
@@ -141,8 +281,33 @@
           "No"
         ],
         "selectedAnswer": -1,
-        "weights": {},
+        "weights": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {
+            "Recklessness": 0.9
+          },
+          {
+            "Recklessness": 0.6
+          },
+          {
+            "Recklessness": 0.3
+          },
+          {
+            "Recklessness": 0.1
+          }
+        ],
         "outcomes": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "removals": [
           {},
           {},
           {},
@@ -155,62 +320,98 @@
     {
       "shortDescription": "Talking about it",
       "longDescription": "You don\u0027t give a suicidal person morbid ideas by talking about suicide. The opposite is true — bringing up the subject of suicide and discussing it openly is one of the most helpful things you can do.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Seeking help",
       "longDescription": "Studies of suicide victims have shown that more than half had sought medical help in the six months prior to their deaths.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Mention of suicide",
-      "longDescription": "Almost everyone who commits or attempts suicide has given some clue or warning. Do not ignore suicide threats. Statements like \"you\u0027ll be sorry when I\u0027m dead,\" \"I can\u0027t see any way out,\" — no matter how casually or jokingly said may indicate serious suicidal feelings.",
-      "weight": 0.0
+      "longDescription": "Almost everyone who commits or attempts suicide has given some clue or warning. Do not ignore suicide threats. Statements like \"you\u0027ll be sorry when I\u0027m dead\", \"I can\u0027t see any way out\" — no matter how casually or jokingly said may indicate serious suicidal feelings.",
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Seeking out lethal means",
       "longDescription": "Suicidal people will often seek out weapons to take some control of their situation. If they are willing to listen to you, you should be able to convince them to give up any weapons they have. If they refuse, consider trying to use your authority on them. Tell them they don\u0027t need it.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Preoccupation with death",
       "longDescription": "Suicidal individuals will often become preoccupied with death. This obsession can lead to a downward spiral. Don’t tell them not to think about it, but try getting them interested in other topics. Ask them about what they find interesting and try move the subject to this topic.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "No hope for the future",
       "longDescription": "Feelings of helplessness, hopelessness, and being trapped are all signs of depression. Remind them that there are people who care about them, and talk about what you like about them.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Self-loathing, self-hatred",
-      "longDescription": "Feelings of worthlessness, guilt, shame, and self-hatred are dangerous both to the at risk individual, and the people around them. They may lash out at people around them if they feel they are unworthy of being helped. Your first reaction should be to console them, but if they are being difficult, it may be better to give them space to calm down. Make sure they don’t have any weapons in them before you leave. ",
-      "weight": 0.0
+      "longDescription": "Feelings of worthlessness, guilt, shame, and self-hatred are dangerous both to the at risk individual, and the people around them. They may lash out at people around them if they feel they are unworthy of being helped. Your first reaction should be to console them, but if they are being difficult, it may be better to give them space to calm down. Make sure they don’t have any weapons in them before you leave.",
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Getting affairs in order",
       "longDescription": "Making out a will. Giving away prized possessions. Making arrangements for family members. These can all be signs that a person is considering suicide. If you notice these signs, read ‘Starting a conversation’.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Saying goodbye",
       "longDescription": "Unusual or unexpected visits or calls to family and friends. Saying goodbye to people as if they won\u0027t be seen again. These can all be signs that a person is considering suicide. If you notice these signs, read ‘Starting a conversation’.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Withdrawing from others",
       "longDescription": "Withdrawing from friends and family. Increasing social isolation. Desire to be left alone. Suicidal individuals may attempt to isolate themselves, but this should be considered as a cry for help. It is always a good idea to make regular check-ins on them, but don’t smother them if they need time alone as well.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
+    },
+    {
+      "shortDescription": "Health problems",
+      "longDescription": "Poor health, including bad diet and lack of sleep can be a contributing factor to suicide. Make sure the person is eating well and getting regular exercise. ",
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Self-destructive behaviour",
       "longDescription": "Increased alcohol or drug use, reckless driving, unsafe sex. Taking unnecessary risks as if they have a \"death wish.\" These can all be signs that a person is considering suicide. If you notice these signs, read ‘Starting a conversation’.",
-      "weight": 0.0
+      "weight": 0.0,
+      "dismissals": []
     },
     {
       "shortDescription": "Sudden sense of calm",
-      "longDescription": "A sudden sense of calm and happiness after being extremely depressed can mean that the person has made a decision to commit suicide. If this is true confront them immediately. A call button for the suicide hotline is available on the front page of this app. ",
-      "weight": 0.0
+      "longDescription": "A sudden sense of calm and happiness after being extremely depressed can mean that the person has made a decision to commit suicide. If this is true confront them immediately. A call button for the suicide hotline is available on the front page of this app.",
+      "weight": 0.0,
+      "dismissals": []
+    },
+    {
+      "shortDescription": "The dangers of isolation",
+      "longDescription": "Left alone their is a good chance that a suicidal individual will only get worse. Make sure to maintain regular contact with them and ask them if there is anything you can do to help them.",
+      "weight": 0.0,
+      "dismissals": []
+    },
+    {
+      "shortDescription": "Feeling worthless",
+      "longDescription": "There is a chance a suicidal person will think of themselves as a burden to their friends and not worthy of help. If you suspect this is true, try to find them something to do that will make them feel useful.",
+      "weight": 0.0,
+      "dismissals": []
+    },
+    {
+      "shortDescription": "Consider genetics",
+      "longDescription": "It is possible that if their familly have a history of mental illness, then they may be more suceptable to the physical aspects of depression. In this case, take extra precaution to check up on them and remove any potential weapons.",
+      "weight": 0.0,
+      "dismissals": []
     }
   ],
   "preventativeGoals": [
@@ -218,31 +419,183 @@
       "name": "Make the initial conversation",
       "description": "It is important to be honest and clear when you talk to the person. Ask them if they are thinking about suicide and why. It is ok to talk about it. Don’t worry about giving them ideas.",
       "complete": false,
-      "relatedQuestion": "Have you made the initial conversation?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have you made the initial conversation?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Saying goodbye": -0.2,
+            "Mention of suicide": -0.2,
+            "Getting affairs in order": -0.1
+          },
+          {
+            "Saying goodbye": 0.2,
+            "Mention of suicide": 0.2,
+            "Getting affairs in order": 0.1
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Remove potential means of suicide.",
       "description": "These include pills, knives, razors, or firearms. If the person is likely to take an overdose, keep medications locked away or give out only as the person needs them. They are likely to listen to you if you act as an authority figure.",
       "complete": false,
-      "relatedQuestion": "Have they surrendered all possible weapons?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have they surrendered all possible weapons?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Self-destructive behaviour": -0.2,
+            "Preoccupation with death": -0.2
+          },
+          {
+            "Self-destructive behaviour": 0.2,
+            "Preoccupation with death": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Ask person to seek professional help. ",
       "description": "Do everything in your power to get a suicidal person the help he or she needs. Call a crisis line for advice and referrals. Encourage the person to see a mental health professional, help locate a treatment facility, or take them to a doctor\u0027s appointment.",
       "complete": false,
-      "relatedQuestion": "Have they agreed to professional help?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have they agreed to professional help?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Feeling worthless": -0.2
+          },
+          {
+            "Feeling worthless": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Make a safety plan. ",
       "description": "Help the person develop a set of steps he or she promises to follow during a suicidal crisis. It should identify any triggers that may lead to a suicidal crisis, such as an anniversary of a loss, alcohol, or stress from relationships. Also include contact numbers for the person\u0027s doctor or therapist, as well as friends and family members who will help in an emergency.",
       "complete": false,
-      "relatedQuestion": "Do you have a suitable safety plan?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Do you have a suitable safety plan?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Seeking out lethal means": -0.2,
+            "Withdrawing from others": -0.1
+          },
+          {
+            "Seeking out lethal means": 0.2,
+            "Withdrawing from others": 0.1
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Schedule times to check up on them",
       "description": "Between you and your friends you should make sure that you can check up on this person at least once a day for the early stages of their recovery.",
       "complete": false,
-      "relatedQuestion": "Have you made a check-up schedule?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have you made a check-up schedule?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "No hope for the future": -0.1,
+            "Self-loathing, self-hatred": -0.1,
+            "The dangers of isolation": -0.2
+          },
+          {
+            "No hope for the future": 0.1,
+            "Self-loathing, self-hatred": 0.1,
+            "The dangers of isolation": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     }
   ],
   "recoveryGoals": [
@@ -250,55 +603,319 @@
       "name": "Help them get a regular social outlet",
       "description": "This could be anything from a sports team to a club to a regular hangout session with friends. Regular social contact and the feeling of usefulness is an effective counter to depression.",
       "complete": false,
-      "relatedQuestion": "Have they committed to a regular social outlet?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have they committed to a regular social outlet?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Self-loathing, self-hatred": -0.1,
+            "Withdrawing from others": 0.3
+          },
+          {
+            "Self-loathing, self-hatred": 0.1,
+            "Withdrawing from others": 0.3
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Get them clean from drugs",
       "description": "Getting clean from drugs is dangerous for a person under extreme pressure. It will help out there mood in the long run, but you will have to very careful to take care of them while they recover.",
       "complete": false,
-      "relatedQuestion": "Have they been clean for at least a week?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have they been clean for at least a week?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Self-destructive behaviour": -0.2,
+            "Seeking out lethal means": -0.1
+          },
+          {
+            "Self-destructive behaviour": 0.2,
+            "Seeking out lethal means": 0.1
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Help the person to get into a regular routine of exercise",
       "description": "Exercise is also extremely important as it releases endorphins, relieves stress, and promotes emotional well-being.",
       "complete": false,
-      "relatedQuestion": "Have they started a regular exercise routine?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have they started a regular exercise routine?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Health problems": -0.2
+          },
+          {
+            "Health problems": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Stabilise weight problems",
       "description": "If the person if experiencing any significant loss or gain of weight it is important to address why and get them back to a reasonable diet, or their level of stress will increase. If they are losing weight due to stress, you may have to make food for them to encourage them to eat. If they are gaining weight, you may have to convince them to diet. ",
       "complete": false,
-      "relatedQuestion": "Is their weight remaining stable or returning to normal?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Is their weight remaining stable or returning to normal?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Health problems": -0.2
+          },
+          {
+            "Health problems": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Have them take up a hobby",
       "description": "Any personal achievements will work well to increase the persons sense of self-worth. If they don’t have a hobby, try and find something they can do. You can invite them to do something with you if they would enjoy it. If they do have a hobby, but have abandoned it, convince them to get back into it.",
       "complete": false,
-      "relatedQuestion": "Have they got a hobby to work on?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have they got a hobby to work on?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "No hope for the future": -0.1,
+            "Withdrawing from others": -0.2
+          },
+          {
+            "No hope for the future": 0.1,
+            "Withdrawing from others": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Help them make a plan for the future",
       "description": "If their life feels directionless, a good plan can help them maintain a positive outlook. Help them see a good possible future.",
       "complete": false,
-      "relatedQuestion": "Do they have a good plan for the future?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Do they have a good plan for the future?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Saying goodbye": -0.2,
+            "Sudden sense of calm": -0.1
+          },
+          {
+            "Saying goodbye": 0.2,
+            "Sudden sense of calm": 0.1
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Make sure they have something they can do for enjoyment on their own",
       "description": "Without some way to entertain themselves, they are likely to become cynical with their lives. If you know of anything they enjoy, convince them to spend more time with it.",
       "complete": false,
-      "relatedQuestion": "Do they have some way to entertain themselves?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Do they have some way to entertain themselves?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "No hope for the future": -0.1,
+            "The dangers of isolation": -0.1,
+            "Feeling worthless": -0.2
+          },
+          {
+            "No hope for the future": 0.1,
+            "The dangers of isolation": 0.1,
+            "Feeling worthless": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Resolve aggressiveness issues",
       "description": "If something is making them angry, it is important to find out what or they may take out their anger on other people and regret it. Talk to them about what is making them angry and form a plan to deal with it?",
       "complete": false,
-      "relatedQuestion": "Are they still noticeably angry?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Are they still noticeably angry?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Self-loathing, self-hatred": -0.2
+          },
+          {
+            "Self-loathing, self-hatred": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Convince them to stop engaging in self-harm",
       "description": "Self-harm is fairly common in recovering suicidal people. It may be difficult to convince them to stop. Try addressing the root cause of their self-harm by asking them why they do it instead of just asking them to stop. They may become frustrated with you if you are too forceful, so be careful.",
       "complete": false,
-      "relatedQuestion": "Have they stopped harming themselves?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have they stopped harming themselves?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {
+            "Self-loathing, self-hatred": -0.2
+          },
+          {
+            "Self-loathing, self-hatred": 0.2
+          }
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     }
   ],
   "regularGoals": [
@@ -306,96 +923,91 @@
       "name": "Follow-up on treatment. ",
       "description": "If the doctor prescribes medication, make sure your friend or loved one takes it as directed. Be aware of possible side effects and be sure to notify the physician if the person seems to be getting worse. It often takes time and persistence to find the medication or therapy that’s right for a particular person.",
       "complete": false,
-      "relatedQuestion": "Have you made sure they are still taking their medication?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have you made sure they are still taking their medication?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Ask about how they are feeling",
       "description": "Although it may be a touchy subject, the people often feel like it’s hard to approach anyone about their thoughts and feelings, so it may be easier for you to  make the first step for them. Be a good listener and try to understand their situation and feelings.",
       "complete": false,
-      "relatedQuestion": "Have you asked them about their feelings recently?"
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have you asked them about their feelings recently?",
+        "answers": [
+          "Yes",
+          "No"
+        ],
+        "selectedAnswer": -1,
+        "weights": [
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
+        "outcomes": [
+          {},
+          {}
+        ],
+        "removals": [
+          {},
+          {}
+        ]
+      }
     },
     {
       "name": "Organize a group of friends",
       "description": "having regular special occasions where groups of there friends are together can be a real boost. Events like movie nights, or just hanging out at home can help boost social integrity of the social dynamic.",
       "complete": false,
-      "relatedQuestion": "Have you been on a group outing with them recently?"
-    }
-  ],
-  "initialSurvey": {
-    "questions": [
-      {
-        "question": "Are they on any medication?",
-        "answers": [
-          "None",
-          "Antidepressant",
-          "antipsychotic"
-        ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
-          {},
-          {},
-          {}
-        ]
-      },
-      {
-        "question": "Do they have any prior troubles with suicide?",
-        "answers": [
-          "Yes (more than one)",
-          "Yes (only one)",
-          "No"
-        ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
-          {},
-          {},
-          {}
-        ]
-      },
-      {
-        "question": "Is there a history of mental illness in their family",
+      "ignoreForUsersList": [],
+      "relatedQuestion": {
+        "question": "Have you been on a group outing with them recently?",
         "answers": [
           "Yes",
           "No"
         ],
         "selectedAnswer": -1,
-        "weights": {},
+        "weights": [
+          {},
+          {}
+        ],
+        "dangerWeights": [
+          {},
+          {}
+        ],
         "outcomes": [
           {},
           {}
-        ]
-      },
-      {
-        "question": "How close are you to this person?",
-        "answers": [
-          "Not close",
-          "Friend",
-          "Close Friend",
-          "Family"
         ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
-          {},
-          {},
-          {},
-          {}
-        ]
-      },
-      {
-        "question": "",
-        "answers": [
-          "Yes",
-          "No"
-        ],
-        "selectedAnswer": -1,
-        "weights": {},
-        "outcomes": [
+        "removals": [
           {},
           {}
         ]
       }
-    ]
-  }
+    }
+  ]
 }
